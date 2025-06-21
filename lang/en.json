@@ -24,6 +24,7 @@
 
   "ACTOR.TypeCharacter": "Character",
   "ACTOR.TypeNpc": "Adversary",
+  "ACTOR.TypeCompanion": "Ranger Companion",
 
   "ITEM.TypeItem": "Item",
   "ITEM.TypeInventory": "Inventory",
@@ -37,6 +38,7 @@
 
   "SHEET.Actor.character": "Character Sheet",
   "SHEET.Actor.npc": "Adversary Sheet",
+  "SHEET.Actor.companion": "Companion Sheet",
   "SHEET.Item.default": "Item Sheet",
 
   "SIMPLE.DefineTemplate": "Define as Template",

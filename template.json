@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character", "npc", "companion"],
     "htmlFields": ["biography", "inventory", "worn"],
     "character": {
       "features": [],
@@ -173,6 +173,61 @@
       }
     },
     "npc": {
+      "biography": "",
+      "health": {
+        "value": 0,
+        "min": 0,
+        "max": 6,
+        "tooltip": ""
+      },
+      "stress": {
+        "value": 0,
+        "min": 0,
+        "max": 6,
+        "tooltip": ""
+      },
+      "threshold": {
+        "minor": 0,
+        "major": 0
+      },
+      "defenses": {
+        "evasion": {
+          "value": 0,
+          "tooltip": "Your character's Evasion reflects how hard it is for adversaries to hit them."
+        },
+        "armor": {
+          "value": 0,
+          "tooltip": "When your character takes damage, you can mark one Armor Slot, then reduce the severity of the damage by one threshold."
+        },
+        "armor-slots": {
+          "value": 0,
+          "max": 6,
+          "tooltip": "Armorslots indicate the number of available slots for equipping armor, influencing your overall Armor Score."
+        },
+        "severe": {
+          "value": 0
+        },
+        "major": {
+          "value": 0
+        },
+        "minor": {
+          "value": 0
+        }
+      },
+      "attributes": {},
+      "groups": {},
+      "weapon-main": {
+        "name": "",
+        "description": "Input your weapon abilities, description, passive and other relevant notes here.",
+        "damage": "",
+        "to-hit": "",
+        "range": "",
+        "modifier": "",
+        "dmgType": ""
+      },
+      "resourceTrackers": []
+    },
+    "companion": {
       "biography": "",
       "health": {
         "value": 0,

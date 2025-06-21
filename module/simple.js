@@ -3,6 +3,7 @@ import { SimpleActor } from "./actor.js";
 import { SimpleItem } from "./item.js";
 import { SimpleItemSheet } from "./item-sheet.js";
 import { SimpleActorSheet, NPCActorSheet } from "./actor-sheet.js";
+import { CompanionActorSheet } from "./actor-sheet-companion.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 import { createDaggerheartMacro } from "./macro.js";
 import { SimpleToken, SimpleTokenDocument } from "./token.js";
@@ -102,7 +103,8 @@ Hooks.once("init", async function() {
   CONFIG.Actor.documentClass = SimpleActor;
   CONFIG.Actor.typeLabels = {
     character: "ACTOR.TypeCharacter",
-    npc: "ACTOR.TypeNpc"
+    npc: "ACTOR.TypeNpc",
+    companion: "ACTOR.TypeCompanion"
   };
   CONFIG.Item.documentClass = SimpleItem;
   CONFIG.Item.typeLabels = {
@@ -130,6 +132,11 @@ Hooks.once("init", async function() {
     types: ["npc"],
     makeDefault: true,
     label: "SHEET.Actor.npc"
+  });
+  foundry.documents.collections.Actors.registerSheet("daggerheart", CompanionActorSheet, {
+    types: ["companion"],
+    makeDefault: true,
+    label: "SHEET.Actor.companion"
   });
   foundry.documents.collections.Items.unregisterSheet("core", foundry.applications.sheets.ItemSheetV2);
   foundry.documents.collections.Items.registerSheet("daggerheart", SimpleItemSheet, {
